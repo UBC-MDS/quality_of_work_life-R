@@ -117,13 +117,13 @@ app$callback(
         
         plot_data <- qwl_df %>%
             rename(analysis_col = col_name) %>%
-            filter(residence == "Japan") %>%
+            filter(residence == xcol) %>%
             count(analysis_col)
         
         p <- ggplot(data=plot_data, aes(x=analysis_col)) +
             geom_bar() +
             geom_text(stat='count', aes(label=..count..)) +
-            ggtitle("How healthy are the employees feeling overall?") +
+            ggtitle("How frequently do employees find meaningfulness at work?") +
             ggthemes::scale_color_tableau()
         
         ggplotly(p)
