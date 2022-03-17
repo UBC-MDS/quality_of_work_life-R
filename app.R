@@ -2,11 +2,12 @@ library(dash)
 library(dash)
 library(dashBootstrapComponents)
 library(dashHtmlComponents)
-library(dashCoroComponents)
+library(dashCoreComponents)
 library(ggplot2)
 library(dplyr)
 library(plotly)
 library(purrr)
+library(tidyr)
 
 qwl_df <- readr::read_csv("./data/bei_vita_qwl_assessment.csv")
 qwl_df$residence <- qwl_df$`Country of Residence`
@@ -71,8 +72,8 @@ app$layout(
                     ),
                     dbcCol(
                         list(
-                            # Abhiket's Code
-                            dccGraph(id='plot-area')
+                            # Morgan's Code
+                            dccGraph(id='plot')
                         )
                     )
                     
@@ -132,9 +133,17 @@ app$callback(
 
 # Morgan's Function
 app$callback(
-    output(id = 'plot', property = 'figure'),
-    list(input(id = 'country-select', property = 'value')),
+    output("plot", "figure"),
+    list(input("col-select", "value")),
     function(c) {
+        workshop_topics <- c('Stress Optimization',
+                     'Mindset Coaching',
+                     'Sleep Strategies',
+                     'Social Wellbeing',
+                     'Leadership and Teamwork',
+                     'Physical Health & Fitness',
+                     'Nutrition & Gut Health')
+        
         qwl_df_temp <- qwl_df
         names(qwl_df_temp)[5] = "Country"
         
