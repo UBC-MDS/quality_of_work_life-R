@@ -159,7 +159,7 @@ app$callback(
             aes(x = Workshop, y = Preference, color = Workshop) +
             geom_boxplot(aes(middle = mean(Preference))) + 
             theme(axis.text.x = element_text(angle = 90)) +
-            #ggtitle(title) +
+            ggtitle("What topics do your employees want support with (lower is better)?") +
             ggthemes::scale_color_tableau()
         ggplotly(p)
     }
