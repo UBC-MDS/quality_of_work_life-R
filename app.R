@@ -1,13 +1,10 @@
 library(dash)
-library(dash)
 library(dashBootstrapComponents)
 library(dashHtmlComponents)
 library(dashCoreComponents)
 library(ggplot2)
-library(dplyr)
 library(plotly)
 library(purrr)
-library(tidyr)
 
 qwl_df <- readr::read_csv("./data/bei_vita_qwl_assessment.csv")
 qwl_df$residence <- qwl_df$`Country of Residence`
@@ -165,19 +162,4 @@ app$callback(
     }
 )
 
-
-# Abhiket's Function
-# app$callback(
-#     output('plot-area', 'figure'),
-#     list(input('col-select', 'value')),
-#     function(col){
-#         data_sub <- filter(qwl_df, Country_of_Residence == col)
-#         p <- ggplot(data_sub, aes(x= Total_score))+ 
-#             geom_area(stat ="count", color="darkblue",
-#                       fill="lightblue", size = 1) +
-#             ggthemes::scale_color_tableau()
-#         ggplotly(p) %>% layout(dragmode = 'select')
-#     }
-# )
-
-app$run_server(debug = TRUE)
+app$run_server(host = "0.0.0.0"))
