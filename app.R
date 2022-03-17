@@ -65,13 +65,14 @@ app$layout(
                 list(
                     dbcCol(
                         list(
+                            # Berkay's Plot
                             dccGraph(id="hbarplot")
                         )
                     ),
                     dbcCol(
                         list(
-                            # Country Plot Morgan's
-                            dccGraph(id="plot")
+                            # Abhiket's Code
+                            dccGraph(id='plot-area')
                         )
                     )
                     
@@ -161,22 +162,12 @@ app$callback(
     output('plot-area', 'figure'),
     list(input('col-select', 'value')),
     function(col){
-        data_sub <- filter(data, Country_of_Residence == col)
+        data_sub <- filter(qwl_df, Country_of_Residence == col)
         p <- ggplot(data_sub, aes(x= Total_score))+ 
             geom_area(stat ="count", color="darkblue",
                       fill="lightblue", size = 1) +
             ggthemes::scale_color_tableau()
         ggplotly(p) %>% layout(dragmode = 'select')
-    }
-)
-
-app$callback(
-    list(output('output-area', 'children'),
-         output('output-area2', 'children')),
-    list(input('plot-area', 'selectedData'),
-         input('plot-area', 'hoverData')),
-    function(selected_data, hover_data) {
-        list(toString(selected_data), toString(hover_data))
     }
 )
 
