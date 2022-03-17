@@ -166,7 +166,7 @@ app$callback(
 )
 
 
-# Abhiket's Function
+Abhiket's Function
 app$callback(
     output('plot-area', 'figure'),
     list(input('col-select', 'value')),
@@ -180,4 +180,4 @@ app$callback(
     }
 )
 
-app$run_server(host = '0.0.0.0')
+app$run_server(debug = TRUE)
