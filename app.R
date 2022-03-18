@@ -5,6 +5,8 @@ library(dashCoreComponents)
 library(ggplot2)
 library(plotly)
 library(purrr)
+library(dplyr)
+library(tidyr)
 
 qwl_df <- readr::read_csv("./data/bei_vita_qwl_assessment.csv")
 qwl_df$residence <- qwl_df$`Country of Residence`
@@ -161,4 +163,4 @@ app$callback(
     }
 )
 
-app$run_server(host = "0.0.0.0"))
+app$run_server(host = '0.0.0.0')
