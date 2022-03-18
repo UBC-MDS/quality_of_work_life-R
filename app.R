@@ -120,10 +120,9 @@ app$callback(
             filter(residence == xcol) %>%
             count(analysis_col)
         
-        p <- ggplot(data=plot_data, aes(x=analysis_col)) +
-            geom_bar() +
-            geom_text(stat='count', aes(label=..count..)) +
-            ggtitle("How frequently do employees find meaningfulness at work?") +
+        p <- ggplot(data=plot_data, aes(x=analysis_col, y=n)) +
+            geom_bar(stat = 'identity') +
+            ggtitle("How healthy are the employees feeling overall?") +
             ggthemes::scale_color_tableau()
         
         ggplotly(p)
