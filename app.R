@@ -5,6 +5,7 @@ library(dashCoreComponents)
 library(ggplot2)
 library(plotly)
 library(purrr)
+library(tidyr)
 
 qwl_df <- readr::read_csv("./data/bei_vita_qwl_assessment.csv")
 qwl_df$residence <- qwl_df$`Country of Residence`
