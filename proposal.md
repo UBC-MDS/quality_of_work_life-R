@@ -23,14 +23,14 @@ data visualization, rather than creating them manually; and 2) They will
 be able to rapidly generate different visualizations for slices of the
 data - this is particularly useful if they are on a call with one of
 their employer clients who asks a specific question, like "what are the
-average well-being scores in JUST our Hong Kong offices?""
+average well-being scores in JUST our Hong Kong offices?"
 
 In the medium to long term, this will also be able to be rolled out
 directly to BEI Vita's clients so that they can gain these insights
 directly on an ongoing basis. We will base our use case and project on
 the medium to long term goal of creating an employer facing dashboard,
 to answer the overarching question "How is the health of my employees,
-and in what ways can I support their health?""
+and in what ways can I support their health?"
 
 ### Description of the data
 
@@ -78,14 +78,14 @@ global bank with presence in Asia, Europe and Americas. Due to the
 prevailing worldwide pandemic, she keeps getting the news that the
 employees are quitting their jobs and those who are staying are not very
 motivated. To gauge the impact and to take corrective actions she has
-hired "BEI Vita"", a startup who are experts in this field.
+hired "BEI Vita", a startup who are experts in this field.
 
 BEI Vita has reached out to us for help with this assignment and to make
 an automated dashboard that they can use across different clients. Right
 now, despite having many large clients, all of their analysis and
 reporting is still done by hand in Excel. They want make a holistic
 dashboard so that when an user (in this case Ms.Guan Yin) logs on to
-the "Quality of Work Life"" dashboard, she will be able to explore data
+the "Quality of Work Life" dashboard, she will be able to explore data
 collected through the survey and to interpret the effect of different
 factors on employee health and well-being. This would help identify the
 areas of intervention and improvements. She wants the dashboard to be
