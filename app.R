@@ -28,7 +28,8 @@ app$layout(
                         #TODO Maybe change to markdown?
                         htmlH3("Visualization to represent how scores for quality of
                                 work life are distributed")
-                    )
+                    ), 
+                    width = 3
                 ),
                 dbcCol(
                     list(
