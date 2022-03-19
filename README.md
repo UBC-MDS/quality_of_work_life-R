@@ -8,8 +8,11 @@ Employee wellbeing is a major concern in today's corporate world. Many employees
 
 This dashboard will help employers view and understand the health of their employee base to then take proactive steps to keep their employees happy, healthy, and 'here' (retained). It can be used to monitor employee's work life quality in multiple dimensions such as their overall feeling, workshop preference and meaninfulness at work.
 
-## Usefull Links:
+## Current Live Dashboard Image:
+![alt text](https://github.com/UBC-MDS/quality_of_work_life-R/blob/master/doc/live_dashboard.png)
 
+## Usefull Links:
+- [Live Dashboard Link](https://quality-of-work-life-r.herokuapp.com/)
 - [Proposal Link](https://github.com/UBC-MDS/quality_of_work_life-R/blob/main/proposal.md)
 
 

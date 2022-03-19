@@ -33,7 +33,7 @@ app$layout(
                 dbcCol(
                     list(
                         htmlH1("Quality of Work Life"),
-                        htmlH2("Client Name")
+                        htmlH2("Client: HDBC Bank")
                     ), width = 6
                     )
                 )
