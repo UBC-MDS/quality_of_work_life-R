@@ -29,7 +29,7 @@ app$layout(
                         htmlH3("Visualization to represent how scores for quality of
                                 work life are distributed")
                     ), 
-                    width = 3
+                    width = 4
                 ),
                 dbcCol(
                     list(
